@@ -38,8 +38,7 @@ struct TimeMeasurer {
 };
 
 int main() {
-  // std::unique
-  // {
+  { // std::unique
   //   std::vector<int> a{1, 2, 2, 2, 4, 5, 5};
   //   std::vector<int>::iterator it = std::unique(a.begin(), a.end());
   //   // auto it = std::unique(a.begin(), a.end());
@@ -47,26 +46,34 @@ int main() {
   //   std::cout << "Iterator: " << it - a.begin() << " (" << *it << ")\n";
   //   a.erase(it, a.end());
   //   Print(a);
-  // }
-  // {
+  }
+  {
   //   std::vector<int> a{1, 2, 2, 2, 4, 5, 5};
   //   a.erase(std::unique(a.begin(), a.end()), a.end());
   //   Print(a);
-  // }
-  // {
+  }
+  {
   //   std::vector<int> a{1, 2, 2, 2, 4, 5, 5};
   //   std::vector<int> b;
   //   std::unique_copy(a.begin(), a.end(), std::back_inserter(b));
   //   Print(b);
-  // }
+  }
 
-  // {  // stringstream
+
+
+
+
+
+
+
+
+  {  // stringstream
   //   std::stringstream ss;
   //   ss << 1.2 << ' ' << 3 << "\n";
   //   std::string str = ss.str();
   //   std::cout << str;
-  // }
-  // {
+  }
+  {
   //   std::stringstream ss;
   //   ss << "123.43 12 string";
   //   double d;
@@ -74,8 +81,8 @@ int main() {
   //   std::string str;
   //   ss >> d >> i >> str;
   //   std::cout << d << ' ' << i << ' ' << str << '\n';
-  // }
-  // {
+  }
+  {
   //   std::stringstream ss;
   //   ss << "123.43|12|string";
   //   double d;
@@ -85,14 +92,28 @@ int main() {
   //   ss >> i;
   //   ss >> str;
   //   std::cout << d << ' ' << i << ' ' << str << '\n';
-  // }
+  }
 
-  // {  //to_string
+
+
+
+
+
+
+
+
+  {  // to_string
   //   std::string int_str = std::to_string(42);
   //   std::cout << int_str << ' ';
-  // }
-  //
-  // { // to_string
+  }
+
+
+
+
+
+
+
+  { // to_string
   //   auto f = [] (double d) {
   //     std::cout << "std::cout: " << d << '\n';
   //     std::cout << "std::to_string: " << std::to_string(d) << "\n\n";
@@ -104,14 +125,30 @@ int main() {
   //   // f(1e40);
   //   // f(1e-40);
   //   // f(123456789);
-  // }
+  }
 
-  // {  // stoi
+
+
+
+
+
+
+
+
+  {  // stoi
   //   std::cout << std::stoi("101", nullptr, 2) << '\n';
   //   std::cout << std::stoi("101", nullptr, 10) << '\n';
-  // }
+  }
 
-  // { // стандартные предикаты
+
+
+
+
+
+
+
+
+  { // стандартные предикаты
   //   {
   //     std::vector<int> a{1, 3, 2, 5, 1, 0, 9, 4};
   //     std::sort(a.begin(), a.end(), std::greater<>());
@@ -126,66 +163,104 @@ int main() {
   //     std::set<int, std::greater<>> a{1, 3, 2, 5, 1, 0, 9, 4};
   //     Print(a);
   //   }
-  // }
+  }
 
-  // // компараторы
+
+
+
+
+
+
+
+
+
+  // компараторы
   // struct comp {
   //   bool operator()(const std::string& s1, const std::string& s2) const {
   //     return parse_name(s1) < parse_name(s2);
   //   }
   // };
   //
-  // {
+  {
   //   std::set<std::string> set;
   //   set.insert("Matvey Maximov");
   //   set.insert("Kostya Mex");
   //   Print(set, '\n');
-  // }
-  // {
+  }
+  {
   //   std::set<std::string, comp> set;
   //   set.insert("Matvey Maximov");
   //   set.insert("Kostya Mex");
   //   Print(set, '\n');
-  // }
+  }
 
-  // { // fill
+
+
+
+
+
+
+
+
+
+
+  { // fill
   //   std::vector<int> a(10);
   //   std::fill(a.begin(), a.end() - 2, 5);
   //   Print(a);
-  // }
-  // {
+  }
+  {
   //   std::vector<int> a(10);
   //   std::fill_n(a.begin(), 8, 5);
   //   Print(a);
-  // }
+  }
 
-  // { // next_permutation
+
+
+
+
+
+
+
+
+
+  { // next_permutation
   //   std::vector<int> a(4);
   //   std::iota(a.begin(), a.end(), 0);
   //   do {
   //     Print(a);
   //   } while (std::next_permutation(a.begin(), a.end()));
-  // }
+  }
 
-  // {
-  //   const int n = 1e6;
-  //   std::string s(n, 'a');
-  //   std::generate(s.begin(), s.end(), []() {
-  //     static std::mt19937 gen(std::random_device{}());
-  //     static std::uniform_int_distribution<char> dist('a', 'z');
-  //     return dist(gen);
-  //   });
-  //   {
-  //     TimeMeasurer t("string::find");
-  //     for (int i = 0; i < 1e7; i = i + 1) {
-  //       s.find('a');
-  //     }
-  //   }
-  //   {
-  //     TimeMeasurer t("std::find");
-  //     for (int i = 0; i < 1e7; i = i + 1) {
-  //       std::find(s.begin(), s.end(), 'a');
-  //     }
-  //   }
-  // }
+
+
+
+
+
+
+
+
+
+
+  {
+    const int n = 1e6;
+    std::string s(n, 'a');
+    std::generate(s.begin(), s.end(), []() {
+      static std::mt19937 gen(std::random_device{}());
+      static std::uniform_int_distribution<char> dist('a', 'z');
+      return dist(gen);
+    });
+    {
+      TimeMeasurer t("string::find");
+      for (int i = 0; i < 1e7; i = i + 1) {
+        s.find('a');
+      }
+    }
+    {
+      TimeMeasurer t("std::find");
+      for (int i = 0; i < 1e7; i = i + 1) {
+        std::find(s.begin(), s.end(), 'a');
+      }
+    }
+  }
 }
