@@ -39,60 +39,27 @@ struct TimeMeasurer {
 
 int main() {
   { // std::unique
-  //   std::vector<int> a{1, 2, 2, 2, 4, 5, 5};
-  //   std::vector<int>::iterator it = std::unique(a.begin(), a.end());
-  //   // auto it = std::unique(a.begin(), a.end());
-  //   Print(a);
-  //   std::cout << "Iterator: " << it - a.begin() << " (" << *it << ")\n";
-  //   a.erase(it, a.end());
-  //   Print(a);
+    // std::vector<int> a{1, 2, 2, 2, 4, 5, 5};
+    // std::vector<int>::iterator it = std::unique(a.begin(), a.end());
+    // // auto it = std::unique(a.begin(), a.end());
+    // Print(a);
+    // std::cout << "Iterator: " << it - a.begin() << " (" << *it << ")\n";
+    // a.erase(it, a.end());
+    // Print(a);
   }
   {
-  //   std::vector<int> a{1, 2, 2, 2, 4, 5, 5};
-  //   a.erase(std::unique(a.begin(), a.end()), a.end());
-  //   Print(a);
+    // std::vector<int> a{1, 2, 2, 2, 4, 5, 5};
+    // a.erase(std::unique(a.begin(), a.end()), a.end());
+    // Print(a);
   }
   {
-  //   std::vector<int> a{1, 2, 2, 2, 4, 5, 5};
-  //   std::vector<int> b;
-  //   std::unique_copy(a.begin(), a.end(), std::back_inserter(b));
-  //   Print(b);
+    // std::vector<int> a{1, 2, 2, 2, 4, 5, 5};
+    // std::vector<int> b;
+    // std::unique_copy(a.begin(), a.end(), std::back_inserter(b));
+    // Print(a);
+    // Print(b);
   }
 
-
-
-
-
-
-
-
-
-  {  // stringstream
-  //   std::stringstream ss;
-  //   ss << 1.2 << ' ' << 3 << "\n";
-  //   std::string str = ss.str();
-  //   std::cout << str;
-  }
-  {
-  //   std::stringstream ss;
-  //   ss << "123.43 12 string";
-  //   double d;
-  //   int i;
-  //   std::string str;
-  //   ss >> d >> i >> str;
-  //   std::cout << d << ' ' << i << ' ' << str << '\n';
-  }
-  {
-  //   std::stringstream ss;
-  //   ss << "123.43|12|string";
-  //   double d;
-  //   int i;
-  //   std::string str;
-  //   ss >> d;
-  //   ss >> i;
-  //   ss >> str;
-  //   std::cout << d << ' ' << i << ' ' << str << '\n';
-  }
 
 
 
@@ -106,13 +73,6 @@ int main() {
   //   std::string int_str = std::to_string(42);
   //   std::cout << int_str << ' ';
   }
-
-
-
-
-
-
-
   { // to_string
   //   auto f = [] (double d) {
   //     std::cout << "std::cout: " << d << '\n';
@@ -143,6 +103,74 @@ int main() {
 
 
 
+
+
+
+
+
+
+  {  // stringstream
+    // std::stringstream ss;
+    // ss << 1.2 << ' ' << 3 << "\n";
+    // std::string str = ss.str();
+    // std::cout << str;
+  }
+  {
+    // std::stringstream ss;
+    // ss << "123.43 12 string";
+    // double d;
+    // int i;
+    // std::string str;
+    // ss >> d >> i >> str;
+    // std::cout << d << ' ' << i << ' ' << str << '\n';
+  }
+  {
+    // std::stringstream ss;
+    // ss << "123.43|12|string";
+    // double d;
+    // int i;
+    // std::string str;
+    // ss >> d;
+    // ss >> i;
+    // ss >> str;
+    // std::cout << d << ' ' << i << ' ' << str << '\n';
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+  //   std::vector<double> doubles(1e6);
+  //   std::generate(doubles.begin(), doubles.end(), rand);
+  //   {
+  //     TimeMeasurer time_measurer("stringstream");
+  //     for (auto elem : doubles) {
+  //       std::stringstream ss;
+  //       ss << elem;
+  //       auto str = ss.str();
+  //       ss << str;
+  //       double d;
+  //       ss >> d;
+  //     }
+  //   }
+  //   {
+  //     TimeMeasurer time_measurer("to_string+stoi");
+  //     for (auto elem : doubles) {
+  //       double d = std::stoi(std::to_string(elem));
+  //     }
+  //   }
+  }
 
 
 
@@ -180,18 +208,18 @@ int main() {
   //     return parse_name(s1) < parse_name(s2);
   //   }
   // };
-  //
+
   {
-  //   std::set<std::string> set;
-  //   set.insert("Matvey Maximov");
-  //   set.insert("Kostya Mex");
-  //   Print(set, '\n');
+    // std::set<std::string> set;
+    // set.insert("Matvey Maximov");
+    // set.insert("Kostya Mex");
+    // Print(set, '\n');
   }
   {
-  //   std::set<std::string, comp> set;
-  //   set.insert("Matvey Maximov");
-  //   set.insert("Kostya Mex");
-  //   Print(set, '\n');
+    // std::set<std::string, comp> set;
+    // set.insert("Matvey Maximov");
+    // set.insert("Kostya Mex");
+    // Print(set, '\n');
   }
 
 
@@ -205,14 +233,14 @@ int main() {
 
 
   { // fill
-  //   std::vector<int> a(10);
-  //   std::fill(a.begin(), a.end() - 2, 5);
-  //   Print(a);
+    // std::vector<int> a(10);
+    // std::fill(a.begin(), a.end() - 2, 5);
+    // Print(a);
   }
   {
-  //   std::vector<int> a(10);
-  //   std::fill_n(a.begin(), 8, 5);
-  //   Print(a);
+    // std::vector<int> a(10);
+    // std::fill_n(a.begin(), 8, 5);
+    // Print(a);
   }
 
 
@@ -225,11 +253,11 @@ int main() {
 
 
   { // next_permutation
-  //   std::vector<int> a(4);
-  //   std::iota(a.begin(), a.end(), 0);
-  //   do {
-  //     Print(a);
-  //   } while (std::next_permutation(a.begin(), a.end()));
+    // std::vector<int> a(4);
+    // std::iota(a.begin(), a.end(), 0);
+    // do {
+    //   Print(a);
+    // } while (std::next_permutation(a.begin(), a.end()));
   }
 
 
