@@ -38,7 +38,7 @@ struct TimeMeasurer {
 };
 
 int main() {
-  // // std::unique
+  // std::unique
   // {
   //   std::vector<int> a{1, 2, 2, 2, 4, 5, 5};
   //   std::vector<int>::iterator it = std::unique(a.begin(), a.end());
@@ -72,9 +72,7 @@ int main() {
   //   double d;
   //   int i;
   //   std::string str;
-  //   ss >> d;
-  //   ss >> i;
-  //   ss >> str;
+  //   ss >> d >> i >> str;
   //   std::cout << d << ' ' << i << ' ' << str << '\n';
   // }
   // {
@@ -93,14 +91,14 @@ int main() {
   //   std::string int_str = std::to_string(42);
   //   std::cout << int_str << ' ';
   // }
-
+  //
   // { // to_string
   //   auto f = [] (double d) {
   //     std::cout << "std::cout: " << d << '\n';
   //     std::cout << "std::to_string: " << std::to_string(d) << "\n\n";
   //   };
-  //   // f(1);
-  //   // f(42);
+  //   // f(1.);
+  //   // f(42.);
   //   // f(23.43);
   //   // f(1e-9);
   //   // f(1e40);
@@ -111,6 +109,23 @@ int main() {
   // {  // stoi
   //   std::cout << std::stoi("101", nullptr, 2) << '\n';
   //   std::cout << std::stoi("101", nullptr, 10) << '\n';
+  // }
+
+  // { // стандартные предикаты
+  //   {
+  //     std::vector<int> a{1, 3, 2, 5, 1, 0, 9, 4};
+  //     std::sort(a.begin(), a.end(), std::greater<>());
+  //     Print(a);
+  //   }
+  //   {
+  //     std::vector<int> a{1, 3, 2, 5, 1, 0, 9, 4};
+  //     std::sort(a.rbegin(), a.rend());
+  //     Print(a);
+  //   }
+  //   {
+  //     std::set<int, std::greater<>> a{1, 3, 2, 5, 1, 0, 9, 4};
+  //     Print(a);
+  //   }
   // }
 
   // // компараторы
@@ -133,28 +148,6 @@ int main() {
   //   Print(set, '\n');
   // }
 
-  // { // стандартные предикаты
-  //   {
-  //     std::vector<int> a{1, 3, 2, 5, 1, 0, 9, 4};
-  //     std::sort(a.begin(), a.end(), std::greater<>());
-  //     Print(a);
-  //   }
-  //   {
-  //     std::set<int, std::greater<>> a{1, 3, 2, 5, 1, 0, 9, 4};
-  //     Print(a);
-  //   }
-  //   {
-  //     std::vector<int> a{1, 3, 2, 5, 1, 0, 9, 4};
-  //     std::sort(a.begin(), a.end(), std::less<>());
-  //     Print(a);
-  //   }
-  //   {
-  //     std::vector<int> a{1, 3, 2, 5, 1, 0, 9, 4};
-  //     std::sort(a.rbegin(), a.rend());
-  //     Print(a);
-  //   }
-  // }
-
   // { // fill
   //   std::vector<int> a(10);
   //   std::fill(a.begin(), a.end() - 2, 5);
@@ -175,7 +168,7 @@ int main() {
   // }
 
   // {
-  //   const int n = 1e5;
+  //   const int n = 1e6;
   //   std::string s(n, 'a');
   //   std::generate(s.begin(), s.end(), []() {
   //     static std::mt19937 gen(std::random_device{}());
@@ -184,13 +177,13 @@ int main() {
   //   });
   //   {
   //     TimeMeasurer t("string::find");
-  //     for (int i = 0; i < 1e8; i = i + 1) {
+  //     for (int i = 0; i < 1e7; i = i + 1) {
   //       s.find('a');
   //     }
   //   }
   //   {
   //     TimeMeasurer t("std::find");
-  //     for (int i = 0; i < 1e8; i = i + 1) {
+  //     for (int i = 0; i < 1e7; i = i + 1) {
   //       std::find(s.begin(), s.end(), 'a');
   //     }
   //   }
