@@ -4,6 +4,7 @@
 #include <ostream>
 #include <random>
 #include <functional>
+#include <iterator>
 
 template<class T>
 void Print(const T& v, char r = ' ') {
