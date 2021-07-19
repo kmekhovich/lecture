@@ -7,7 +7,6 @@
 #include <iomanip>
 #include <random>
 #include <algorithm>
-#include <ext/rope>
 
 template<class T>
 void Print(const T& v, char r = ' ') {
@@ -195,17 +194,5 @@ int main() {
   //       std::find(s.begin(), s.end(), 'a');
   //     }
   //   }
-  // }
-
-  // { // rope
-  //   __gnu_cxx::rope<char> rope;
-  //   rope.append("string");
-  //   rope.insert(1, '1');
-  //   rope.erase(2, 2);
-  //   Print(rope);
-  //   __gnu_cxx::rope<char> rope2;
-  //   rope2.append("programming");
-  //   rope.insert(rope.size() - 1, rope2);
-  //   Print(rope);
   // }
 }
