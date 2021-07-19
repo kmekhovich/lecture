@@ -243,24 +243,24 @@ int main() {
 
 
   {
-    const int n = 1e6;
-    std::string s(n, 'a');
-    std::generate(s.begin(), s.end(), []() {
-      static std::mt19937 gen(std::random_device{}());
-      static std::uniform_int_distribution<char> dist('a', 'z');
-      return dist(gen);
-    });
-    {
-      TimeMeasurer t("string::find");
-      for (int i = 0; i < 1e7; i = i + 1) {
-        s.find('a');
-      }
-    }
-    {
-      TimeMeasurer t("std::find");
-      for (int i = 0; i < 1e7; i = i + 1) {
-        std::find(s.begin(), s.end(), 'a');
-      }
-    }
+    // const int n = 1e6;
+    // std::string s(n, 'a');
+    // std::generate(s.begin(), s.end(), []() {
+    //   static std::mt19937 gen(std::random_device{}());
+    //   static std::uniform_int_distribution<char> dist('a', 'z');
+    //   return dist(gen);
+    // });
+    // {
+    //   TimeMeasurer t("string::find");
+    //   for (int i = 0; i < 1e7; i = i + 1) {
+    //     s.find('a');
+    //   }
+    // }
+    // {
+    //   TimeMeasurer t("std::find");
+    //   for (int i = 0; i < 1e7; i = i + 1) {
+    //     std::find(s.begin(), s.end(), 'a');
+    //   }
+    // }
   }
 }
