@@ -5,11 +5,10 @@
 #include <random>
 #include <functional>
 
-
 template<class T>
-void PrintVector(const std::vector<T>& v) {
+void Print(const T& v, char r = ' ') {
   for (const auto& elem : v) {
-    std::cout << elem << ' ';
+    std::cout << elem << r;
   }
   std::cout << '\n';
 }
@@ -74,7 +73,7 @@ int main() {
   //   std::for_each(a.begin(), a.end(), [](int& x) {
   //     x %= 3;
   //   });
-  //   PrintVector(a);
+  //   Print(a);
   // }
 
   // {
@@ -86,7 +85,7 @@ int main() {
   //     return c;
   //   });
   //   std::cout << s << " ";
-  //   PrintVector(ordinals);
+  //   Print(ordinals);
   // }
 
   // {
@@ -142,31 +141,31 @@ int main() {
   //   std::vector<int> a = {0, 1, 2, 3, 0, 2, 4, 0, 3, 0};
   //   auto end = std::remove(a.begin(), a.end(), 3);
   //   a.erase(end, a.end());
-  //   PrintVector(a);
+  //   Print(a);
   //   auto is_even = [](int x) -> bool {
   //     return x % 2 == 0;
   //   };
   //   end = std::remove_if(a.begin(), a.end(), is_even);
   //   a.erase(end, a.end());
-  //   PrintVector(a);
+  //   Print(a);
   // }
 
   // {
   //   std::vector<int> a(5);
   //   std::generate(a.begin(), a.end(), std::mt19937(std::random_device{}()));
-  //   PrintVector(a);
+  //   Print(a);
   //
   //   std::vector<int> b;
   //   std::sample(a.begin(), a.end(), std::back_inserter(b), 2,
   //               std::mt19937(std::random_device{}()));
-  //   PrintVector(b);
+  //   Print(b);
   //
   //   std::generate(a.begin(), a.end(), []() {
   //     static std::mt19937 rng(42);
   //     static std::uniform_int_distribution<int> distribution(-10, 10);
   //     return distribution(rng);
   //   });
-  //   PrintVector(a);
+  //   Print(a);
   // }
 
   // {
@@ -175,7 +174,7 @@ int main() {
   //   std::vector<int> c;
   //   std::merge(a.begin(), a.end(), b.begin(), b.end(),
   //              std::back_inserter(c));
-  //   PrintVector(c);
+  //   Print(c);
   // }
 
   // {
