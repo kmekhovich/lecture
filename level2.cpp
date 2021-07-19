@@ -29,6 +29,8 @@ int main() {
   //   std::cout << z << "\n";
   //   lambda_f(z);
   //   std::cout << z << "\n";
+  // }
+  // {
   //
   //   int zzz = 5;
   //   auto lam1 = [=]() {
@@ -85,7 +87,7 @@ int main() {
   //                  [](char c) -> int {
   //     return c;
   //   });
-  //   std::cout << s << " ";
+  //   std::cout << s << "\n";
   //   PrintVector(ordinals);
   // }
 
@@ -122,20 +124,20 @@ int main() {
   // }
 
   // {
-    // std::vector<int> a = {1, 3, 3, 4, 2};
-    // std::vector<int> b = {1, 3, 0, 2, 3, 4};
-    // auto pair_it = std::mismatch(a.begin(), a.end(), b.begin(), b.end());
-    // std::cout << *pair_it.first << " " << *pair_it.second << "\n";
-    // std::cout << pair_it.first - a.begin()
-    //     << " " << pair_it.second - b.begin() << "\n\n";
-    //
-    // pair_it = std::mismatch(a.begin(), a.end(), b.begin(), b.end(),
-    //                         [](int elem1, int elem2) {
-    //   return elem1 >= elem2;
-    // });
-    // std::cout << *pair_it.first << " " << *pair_it.second << "\n";
-    // std::cout << pair_it.first - a.begin()
-    //     << " " << pair_it.second - b.begin() << "\n";
+  //   std::vector<int> a = {1, 3, 3, 4, 2};
+  //   std::vector<int> b = {1, 3, 0, 2, 3, 4};
+  //   auto pair_it = std::mismatch(a.begin(), a.end(), b.begin(), b.end());
+  //   std::cout << *pair_it.first << " " << *pair_it.second << "\n";
+  //   std::cout << pair_it.first - a.begin()
+  //       << " " << pair_it.second - b.begin() << "\n\n";
+  //
+  //   pair_it = std::mismatch(a.begin(), a.end(), b.begin(), b.end(),
+  //                           [](int elem1, int elem2) {
+  //     return elem1 >= elem2;
+  //   });
+  //   std::cout << *pair_it.first << " " << *pair_it.second << "\n";
+  //   std::cout << pair_it.first - a.begin()
+  //       << " " << pair_it.second - b.begin() << "\n";
   // }
 
   // {
