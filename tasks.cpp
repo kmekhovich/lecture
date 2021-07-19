@@ -40,7 +40,7 @@ int main() {
 
   // std::vector<double> xArray;
   // std::vector<double> yArray;
-  // for (int i = -6; i < 6;  i += 0.001) {
+  // for (int i = -6; i < 6; i += 0.001) {
   //   xArray.push_back(i);
   //   yArray.push_back(sin(double(i)));
   //   i += 0.2;
